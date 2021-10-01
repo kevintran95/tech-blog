@@ -2,9 +2,12 @@
   "name": "tech-blog",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeds/seed.js",
+    "watch": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +26,10 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.3.4",
     "mysql2": "^2.3.0",
+    "nodemon": "^2.0.13",
+    "seed": "^0.4.4",
     "sequelize": "^6.6.5"
-  }
+  },
+  "devDependencies": {}
 }
+
