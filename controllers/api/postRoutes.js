@@ -19,8 +19,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-
-
+// Route to allow users to delete their own post
 router.delete('/:id', async (req, res) => {
     try {
         const deletePost = await Post.destroy({
