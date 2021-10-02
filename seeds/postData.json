@@ -1,8 +1,18 @@
 [
   {
-    "title": "First post on my blog",
-    "content": "Would I rather be feared or loved? Easy. Both. I want people to be afraid of how much they love me.",
+    "title": " Apples new iphone 13",
+    "content": " Apple has recently released a new iphone and it is very impressive.",
     "user_id": 1
 
+  },
+  {
+    "title": "Xbox series x ",
+    "content": "With the release of Halo Infinite coming up, xbox plans to dominant the console scene",
+    "user_": 2
+  },
+  {
+    "title": "Samsung 8k TV",
+    "content": " Samsung is getting ready to unveil their brand new 8k TV with a retail price of $3000",
+    "user_id": 3
   }
 ]
