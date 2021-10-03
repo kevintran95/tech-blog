@@ -13,10 +13,10 @@ const loginFormHandler = async (event) => {
             headers: { 'Content-Type': 'application/json' },
         });
 
-        if (response.ok) {
+        if  (response.ok) {
             // redirect to app.get("/homepage")
             document.location.replace('/');
-        } else {
+        } else  {
             alert(response.statusText);
         }
     }
