@@ -10,12 +10,12 @@ router.get('/', async (req, res) => {
         model: User
       }]
     });
-    const posts = postData.map((post) => post.get({ plain: true }));
+    const posts = postData.map((posts) => posts.get({ plain: true }));
 
-    res.render('homepage', {
-      posts,
-      loggedIn: req.session.loggedIn
-    });
+    // res.render('homepage', {
+    //   posts,
+    //   loggedIn: req.session.loggedIn
+    // });
 
     res.status(200);
   }catch (err) {
@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
 });
 
 // GET route for single post on homepage
-router.get('/post/id:', async (req, res) => {
+router.get('/post/:id', async (req, res) => {
   try {
     const postData = await Post.findByPk(req.param.id, {
       include: [
@@ -48,12 +48,21 @@ router.get('/post/id:', async (req, res) => {
   }
 });
 
+// GET route for home page
+router.get('/home', async (req, res) => {
+  try {
+    res.render('startpage')
+  } catch (err) {
+    res.status(500).json(err)
+  }
+});
+
 
 // GET route for login
 router.get('/login', async (req, res) => {
   try {
     res.render('login');
-  } catch {
+  } catch (err) {
     res.status(500).json(err)
   }
 });
