@@ -2,6 +2,24 @@ const router = require('express').Router();
 const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth')
 
+// GET route for login
+router.get('/login', async (req, res) => {
+  try {
+    res.render('login');
+  } catch (err) {
+    res.status(500).json(err)
+  }
+});
+
+// GET route for home page
+router.get('/home', async (req, res) => {
+  try {
+    res.render('startpage')
+  } catch (err) {
+    res.status(500).json(err)
+  }
+});
+
 // GET route for all post on homepage
 router.get('/', async (req, res) => {
   try {
@@ -12,10 +30,10 @@ router.get('/', async (req, res) => {
     });
     const posts = postData.map((posts) => posts.get({ plain: true }));
 
-    // res.render('homepage', {
-    //   posts,
-    //   loggedIn: req.session.loggedIn
-    // });
+    res.render('homepage', {
+      posts,
+      loggedIn: req.session.loggedIn
+    });
 
     res.status(200);
   }catch (err) {
@@ -48,6 +66,15 @@ router.get('/post/:id', async (req, res) => {
   }
 });
 
+// GET route for login
+router.get('/login', async (req, res) => {
+  try {
+    res.render('login');
+  } catch (err) {
+    res.status(500).json(err)
+  }
+});
+
 // GET route for home page
 router.get('/home', async (req, res) => {
   try {
@@ -58,14 +85,7 @@ router.get('/home', async (req, res) => {
 });
 
 
-// GET route for login
-router.get('/login', async (req, res) => {
-  try {
-    res.render('login');
-  } catch (err) {
-    res.status(500).json(err)
-  }
-});
+
 
 
 module.exports = router;
