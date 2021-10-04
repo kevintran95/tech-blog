@@ -1,17 +1,17 @@
 <div id={{user.id}}>
-    <div class="card review-card">
-        <div class="card-header">
-            <div class="row">
-                <p class="col-11">{{user.username}}</p>
-                <div class="col-1"> <button data-id={{id}}>x</button> </div>
-            </div>
-        </div>
-        <div class="card-body">
-            <blockquote class="blockquote mb-0">
-                <a href="/post/{{id}}">{{title}}</a>
-                <p>{{date_created}}</p>
-            </blockquote>
-        </div>
+  <div class="card review-card">
+    <div class="card-header">
+      <div class="row">
+        <p class="col-11">{{user.username}}</p>
+        <div class="col-1"> <button data-id={{id}}>x</button> </div>
+      </div>
     </div>
-    </br>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <a href="/post/{{id}}">{{title}}</a>
+        <p>{{date_created}}</p>
+      </blockquote>
+    </div>
+  </div>
+  </br>
 </div>

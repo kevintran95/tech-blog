@@ -1,37 +1,37 @@
 <div class="container">
-    <div class="row">
-        <div class="col text-center">
-            <div class="card review-card column">
-                <div class="card-header">
-                    <h3>{{posts.title}} <span type="text" class="smalltext">by</span> {{posts.user.username}}</h3>
-                </div>
-                <div class="card-body text-center">
-                    <blockquote class="blockquote mb-0">
-                        <h5>{{posts.content}}</h5>
-                        <p>{{posts.date_created}}</p>
-                        <ul class="comments-list">
-                            {{#each comments as |comment|}}
-                            <li>{{> comment}}</li>
-                            {{/each}}
-                        </ul>
-                    </blockquote>
-                </div>
-                <div class="text-center commentbox">
-                    <form class="form new-comment-form">
-                        <div class="form-group">
-                            <label for="comment-desc"></label>
-                            <textarea class="form-input" id="comment-desc" name="comment-desc"
-                                placeholder=" Add a comment"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="box">Add!</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            </br>
+  <div class="row">
+    <div class="col text-center">
+      <div class="card review-card column">
+        <div class="card-header">
+          <h3>{{posts.title}} <span type="text" class="smalltext">by</span> {{posts.user.username}}</h3>
         </div>
+        <div class="card-body text-center">
+          <blockquote class="blockquote mb-0">
+            <h5>{{posts.content}}</h5>
+            <p>{{posts.date_created}}</p>
+            <ul class="comments-list">
+              {{#each comments as |comment|}}
+              <li>{{> comment}}</li>
+              {{/each}}
+            </ul>
+          </blockquote>
+        </div>
+        <div class="text-center commentbox">
+          <form class="form new-comment-form">
+            <div class="form-group">
+              <label for="comment-desc"></label>
+              <textarea class="form-input" id="comment-desc" name="comment-desc"
+                placeholder=" Add a comment"></textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="box">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      </br>
     </div>
+  </div>
 </div>
 
-<script src="/js/comment.js"></script>
+<script src="./js/post.js"></script>
