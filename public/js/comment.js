@@ -1,4 +1,4 @@
-// Add a comment
+// Add comment to a post
 const newFormHandler = async (event) => {
   event.preventDefault();
   var postId = document.location.pathname
@@ -17,12 +17,12 @@ const newFormHandler = async (event) => {
     if (response.ok) {
       document.location.reload();
     } else {
-      alert('Failed to create comment');
+      alert('You must be logged in to add a comment');
     }
   }
 };
 
-// Delete a Comment
+// Delete a comment from a post
 const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
@@ -38,6 +38,7 @@ const delButtonHandler = async (event) => {
     }
   }
 };
+
 
 document
   .querySelector('.new-comment-form')

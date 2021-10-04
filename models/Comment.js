@@ -13,7 +13,6 @@ Comment.init(
     },
     content: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     date_created: {
       type: DataTypes.DATEONLY,
@@ -29,6 +28,7 @@ Comment.init(
     },
     post_id: {
         type: DataTypes.INTEGER,
+        allowNull: false,
         references: {
             model: 'post',
             key: 'id',
@@ -37,7 +37,6 @@ Comment.init(
   },
   {
     sequelize,
-    timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'comment',

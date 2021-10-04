@@ -13,7 +13,6 @@ Post.init(
     },
     title: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     content: {
       type: DataTypes.STRING,
@@ -25,6 +24,7 @@ Post.init(
     },
     user_id: {
       type: DataTypes.INTEGER,
+      allowNull:false,
       references: {
         model: 'user',
         key: 'id'

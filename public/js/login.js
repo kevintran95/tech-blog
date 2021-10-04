@@ -13,10 +13,10 @@ const loginFormHandler = async (event) => {
             headers: { 'Content-Type': 'application/json' },
         });
 
-        if  (response.ok) {
+        if (response.ok) {
             // redirect to app.get("/homepage")
-            document.location.replace('/');
-        } else  {
+            document.location.replace('/dashboard');
+        } else {
             alert(response.statusText);
         }
     }
@@ -36,7 +36,7 @@ const signupFormHandler = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/');
+            document.location.replace('/dashboard');
         } else {
             alert(response.statusText);
         }
