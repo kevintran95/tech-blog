@@ -3,7 +3,7 @@ const { Comment, Post, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 // GET route for dashboard when logged in 
-router.get('/dashboard', async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
   try {
     const postData = await Post.findAll({
       include: [
@@ -29,7 +29,7 @@ router.get('/dashboard', async (req, res) => {
 });
 
 // GET route for a single post
-router.get('/post/:id', async (req, res) => {
+router.get('/post/:id', withAuth, async (req, res) => {
   try {
       const postData = await Post.findByPk(req.params.id, {
           include: [

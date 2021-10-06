@@ -1,18 +1,18 @@
 [
   {
-    "content": "To be honest the new iphone does not look that great in my opinion.",
+    "opinion": "To be honest the new iphone does not look that great in my opinion.",
     "post_id": 1,
     "user_id": 2
     
   },
   {
-    "content": "Yes!!! I have been waiting of this game to come out since it was first leaked in 2018",
+    "opinion": "Yes!!! I have been waiting of this game to come out since it was first leaked in 2018",
     "post_id": 2,
     "user_id": 3
     
   },
   {
-    "content": "Im not sure about everyone else but $3000 for a tv is way overpriced for me",
+    "opinion": "Im not sure about everyone else but $3000 for a tv is way overpriced for me",
     "post_id": 3,
     "user_id": 1
     

@@ -8,5 +8,22 @@ header {
 
 h1 {
   color: antiquewhite;
+  font-size: 75px;
 }
 
+.navBtn {
+text-decoration: none;
+color: antiquewhite;
+font-size: 50px;
+padding: 100px;
+}
+ 
+.collapse {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.intro {
+  font-size: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+}
