@@ -37,7 +37,8 @@ router.get('/post/:id', withAuth, async (req, res) => {
                   model: User
               },
               {
-                  model: Comment
+                  model: Comment,
+                  include: [{model: User}]
               },
 
           ]
